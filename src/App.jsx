@@ -46,15 +46,23 @@ const handleSubmit = () => {
           />
       </div>
       <h1>Input your combination</h1>
-      <div className="card">
+      <div className="keypad-container">
         <input
           type="text"
           value={code}
-          onChange={(e) => setCode(e.target.value)}
-          placeholder= "Enter code"/>
-        <button onClick={handleSubmit}>Submit</button>
-        {message && (<p>{message}</p>)}
+          readOnly
+          placeholder="Enter code"
+          className="keypad-display"
+        />
+
+      <div className="keypad">
+        {[1,2,3,4,5,6,7,8,9,0].map((num) => (
+          <button key={num} onClick={() => setCode(code + num)}>{num}</button>
+      ))}
+        <button onClick={() => setCode(code.slice(0, -1))}>⌫</button>
+        <button onClick={handleSubmit}>✔</button>
       </div>
+    </div>
     </>
   );
 }

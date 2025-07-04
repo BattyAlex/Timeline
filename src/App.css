@@ -78,3 +78,36 @@
   width: 80%;
   max-width: 1000px;
 }
+
+.keypad-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.keypad-display {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 200px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 10px;
+}
+
+.keypad button {
+  font-size: 1.5rem;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #7b7373;
+  cursor: pointer;
+}
+
+.keypad button:hover {
+  background-color: #494545;
+}

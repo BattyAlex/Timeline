@@ -28,16 +28,22 @@ const handleSubmit = () => {
     {showOverlay && (
   <div className="overlay">
     <img
-      src={isCorrect ? '/success.png' : '/fail.png'}
-      alt="result"
-      className="overlay-image"
+    src={isCorrect ? `${import.meta.env.BASE_URL}success.png` : `${import.meta.env.BASE_URL}fail.png`}
+    alt="result"
+    className="overlay-image"
     />
   </div>
 )}
-    <audio id="success-sound" src="/success.mp3" preload="auto" />
-    <audio id="fail-sound" src="/failed.mp3" preload="auto" />
+    
+    <audio id="success-sound" src={`${import.meta.env.BASE_URL}success.mp3`} preload="auto" />
+    <audio id="fail-sound" src={`${import.meta.env.BASE_URL}failed.mp3`} preload="auto" />
+    
       <div>
-          <img src="/timeline.png" className="logo" alt="timeline logo" />
+          <img
+            src={`${import.meta.env.BASE_URL}timeline.png`}
+            className="logo"
+            alt="timeline logo"
+          />
       </div>
       <h1>Input your combination</h1>
       <div className="card">

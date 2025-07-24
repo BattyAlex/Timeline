@@ -37,7 +37,7 @@ const handleSubmit = () => {
     
     <audio id="success-sound" src={`${import.meta.env.BASE_URL}success.mp3`} preload="auto" />
     <audio id="fail-sound" src={`${import.meta.env.BASE_URL}failed.mp3`} preload="auto" />
-    
+    <div className="app-container">
       <div>
           <img
             src={`${import.meta.env.BASE_URL}timeline.png`}
@@ -62,6 +62,7 @@ const handleSubmit = () => {
         <button onClick={() => setCode(code.slice(0, -1))}>⌫</button>
         <button onClick={handleSubmit}>✔</button>
       </div>
+    </div>
     </div>
     </>
   );

@@ -1,9 +1,17 @@
 
 html, body, #root
 {
-  height: 80%;
+  height: 100%;
   margin: 0;
+  padding: 0;
   background: #5F8CB4;
+}
+body {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
 }
 
 #root {
@@ -11,6 +19,12 @@ html, body, #root
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
@@ -91,6 +105,7 @@ html, body, #root
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 20%;
 }
 
 .keypad-display {
